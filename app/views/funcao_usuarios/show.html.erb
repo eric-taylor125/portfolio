@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id funcao:</strong>
+  <%= @funcao_usuario.id_funcao %>
+</p>
+
+<p>
+  <strong>Id usuario:</strong>
+  <%= @funcao_usuario.id_usuario %>
+</p>
+
+<%= link_to 'Edit', edit_funcao_usuario_path(@funcao_usuario) %> |
+<%= link_to 'Back', funcao_usuarios_path %>

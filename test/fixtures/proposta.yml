@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  descricao: MyString
+  preco: 9.99
+  ID_Usuario: 1
+  ID_Concurso: 1
+  ID_Estado_Proposta: 1
+
+two:
+  descricao: MyString
+  preco: 9.99
+  ID_Usuario: 1
+  ID_Concurso: 1
+  ID_Estado_Proposta: 1

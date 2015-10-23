@@ -1,0 +1,27 @@
+<h1>Listing estado_do_curriculos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @estado_curriculos.each do |estado_do_curriculo| %>
+      <tr>
+        <td><%= estado_do_curriculo.nome %></td>
+        <td><%= link_to 'Show', estado_do_curriculo %></td>
+        <td><%= link_to 'Edit', edit_estado_do_curriculo_path(estado_do_curriculo) %></td>
+        <td><%= link_to 'Destroy', estado_do_curriculo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Estado do curriculo', new_estado_do_curriculo_path %>

@@ -1,0 +1,77 @@
+<%= form_for(@concurso, :html => {:class => "container panel-body"}) do |f| %>
+  <% if @concurso.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@concurso.errors.count, "error") %> prohibited this concurso from being saved:</h2>
+
+      <ul>
+      <% @concurso.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :título %><br>
+    <%= f.text_field :titulo, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :descrição %><br>
+    <%= f.text_area :descricao, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :estrutura_da_proposta %><br>
+    <%= f.text_area :estrutura_proposta, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :sumário_executivo %><br>
+    <%= f.text_area :sumario_executivo, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :modelo_de_fornecimento_de_serviço %><br>
+    <%= f.text_area :modelo_fornecimento_servico, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :planeamento %><br>
+    <%= f.text_area :planeamento, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :equipa_de_trabalho %><br>
+    <%= f.text_area :equipa_trabalho, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :custos %><br>
+    <%= f.text_area :custos, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :validade_das_propostas %><br>
+    <%= f.text_area :validade_propostas, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :preço_mínimo %><br>
+    <%= f.text_field :preco_minimo, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :preço_máximo %><br>
+    <%= f.text_field :preco_maximo, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :data_início %><br>
+    <%= f.date_select :data_inicio, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :data_expiração %><br>
+    <%= f.date_select :data_expiracao, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :ID_Usuário %><br>
+    <%= f.number_field :ID_Usuario, {class: "form-control"} %>
+  </div>
+  <div class="form-group">
+    <%= f.label 'Tipo de Concurso' %><br>
+    <%= f.collection_select :ID_Tipo_de_Concurso, TipoConcurso.all, :id, :nome,{}, {class: "form-control"} %>
+  </div>
+  <div class="actions">
+    <%= f.submit :class=> 'btn btn-primary' %>
+  </div>
+<% end %>

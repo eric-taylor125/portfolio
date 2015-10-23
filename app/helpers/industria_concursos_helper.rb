@@ -1,0 +1,2 @@
+module IndustriaConcursosHelper
+end

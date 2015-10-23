@@ -1,0 +1,22 @@
+Tipo_usuarios nome
+Tipo_concursos nome
+Tipo_empregos nome
+Estado_curriculos nome
+Estado_propostas nome
+Provincias nome
+Industrias nome
+Funcao nome
+ProvinciaEmpregos id_provincia:integer id_emprego:integer
+ProvinciaConcursos id_provincia:integer id_concurso:integer
+IndustriaEmpregos id_industria:integer id_emprego:integer
+IndustriaConcursos id_industria:integer id_concurso:integer
+IndustriaUsuarios id_industria:integer id_usuario:integer
+FuncaoEmpregos id_funcao:integer id_emprego:integer
+FuncaoConcursos id_funcao:integer id_concurso:integer
+FuncaoUsuarios id_funcao:integer id_usuario:integer
+CurriculosEmpregos id_emprego:integer id_curriculo:integer
+Usuarios nome morada:text telefone email ID_Tipo_de_Usuario:integer ID_Provincia:integer bairro nome_responsavel funcao_responsavel
+Concursos titulo descricao preco_minimo:decimal preco_maximo:decimal data_inicio:datetime data_expiracao:datetime ID_Usuario:integer ID_Tipo_de_Concurso:integer
+Curriculos nome morada:text telefone email documento_identificacao N_documento_identificacao habilitacoes_literarias Experiencia_Profissional Linguas ID_Usuario:integer ID_Concurso:integer ID_Estado_curriculo:integer
+Propostas descricao preco:decimal ID_Usuario:integer ID_Concurso:integer ID_Estado_Proposta:integer
+Empregos titulo descricao data_inicio:datetime data_expiracao:datetime ID_Usuario:integer ID_Tipo_de_Emprego:integer experiencia_minima:integer salario:decimal

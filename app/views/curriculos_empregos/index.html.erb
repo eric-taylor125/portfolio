@@ -1,0 +1,29 @@
+<h1>Listing curriculos_empregos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id emprego</th>
+      <th>Id curriculo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @curriculos_empregos.each do |curriculos_emprego| %>
+      <tr>
+        <td><%= curriculos_emprego.id_emprego %></td>
+        <td><%= curriculos_emprego.id_curriculo %></td>
+        <td><%= link_to 'Show', curriculos_emprego %></td>
+        <td><%= link_to 'Edit', edit_curriculos_emprego_path(curriculos_emprego) %></td>
+        <td><%= link_to 'Destroy', curriculos_emprego, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Curriculos emprego', new_curriculos_emprego_path %>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_industria: 1
+  id_usuario: 1
+
+two:
+  id_industria: 1
+  id_usuario: 1

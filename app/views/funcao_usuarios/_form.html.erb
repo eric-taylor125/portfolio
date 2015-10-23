@@ -1,0 +1,25 @@
+<%= form_for(@funcao_usuario) do |f| %>
+  <% if @funcao_usuario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@funcao_usuario.errors.count, "error") %> prohibited this funcao_usuario from being saved:</h2>
+
+      <ul>
+      <% @funcao_usuario.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id_funcao %><br>
+    <%= f.number_field :id_funcao %>
+  </div>
+  <div class="field">
+    <%= f.label :id_usuario %><br>
+    <%= f.number_field :id_usuario %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

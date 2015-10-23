@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id funcao:</strong>
+  <%= @funcao_concurso.id_funcao %>
+</p>
+
+<p>
+  <strong>Id concurso:</strong>
+  <%= @funcao_concurso.id_concurso %>
+</p>
+
+<%= link_to 'Edit', edit_funcao_concurso_path(@funcao_concurso) %> |
+<%= link_to 'Back', funcao_concursos_path %>

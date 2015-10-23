@@ -1,0 +1,29 @@
+<h1>Listing provincia_concursos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id provincia</th>
+      <th>Id concurso</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @provincia_concursos.each do |provincia_concurso| %>
+      <tr>
+        <td><%= provincia_concurso.id_provincia %></td>
+        <td><%= provincia_concurso.id_concurso %></td>
+        <td><%= link_to 'Show', provincia_concurso %></td>
+        <td><%= link_to 'Edit', edit_provincia_concurso_path(provincia_concurso) %></td>
+        <td><%= link_to 'Destroy', provincia_concurso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Provincia concurso', new_provincia_concurso_path %>

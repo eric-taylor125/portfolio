@@ -1,0 +1,16 @@
+#encoding: UTF-8
+<div class="navbar navbar-inverse">
+  <ul class="nav navbar-nav">
+    <li><a href="" style="font-size: large"><strong>Editar Concurso</strong></a> </li>
+  </ul>
+  <div class="pull-right btn-group">
+    <%= link_to "Actualizar", :back, :class => "btn btn-primary" %>
+    <%= link_to "Cancelar Edição", :back, :class => "btn btn-warning" %>
+    <%= link_to "Cancelar Concurso", :back, :class => "btn btn-danger" %>
+  </div>
+</div>
+
+<%= render 'form' %>
+
+<%= link_to 'Mostrar', @concurso, :class=> 'btn btn-default' %>
+<%= link_to 'Voltar', concursos_path, :class=> 'btn btn-default' %>

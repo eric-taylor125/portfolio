@@ -1,0 +1,29 @@
+<h1>Listing funcao_usuarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id funcao</th>
+      <th>Id usuario</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @funcao_usuarios.each do |funcao_usuario| %>
+      <tr>
+        <td><%= funcao_usuario.id_funcao %></td>
+        <td><%= funcao_usuario.id_usuario %></td>
+        <td><%= link_to 'Show', funcao_usuario %></td>
+        <td><%= link_to 'Edit', edit_funcao_usuario_path(funcao_usuario) %></td>
+        <td><%= link_to 'Destroy', funcao_usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Funcao usuario', new_funcao_usuario_path %>

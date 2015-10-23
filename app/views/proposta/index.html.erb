@@ -1,0 +1,35 @@
+<h1>Listing proposta</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descricao</th>
+      <th>Preco</th>
+      <th>Id usuario</th>
+      <th>Id concurso</th>
+      <th>Id estado proposta</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @proposta.each do |propostum| %>
+      <tr>
+        <td><%= propostum.descricao %></td>
+        <td><%= propostum.preco %></td>
+        <td><%= propostum.ID_Usuario %></td>
+        <td><%= propostum.ID_Concurso %></td>
+        <td><%= propostum.ID_Estado_Proposta %></td>
+        <td><%= link_to 'Show', propostum %></td>
+        <td><%= link_to 'Edit', edit_propostum_path(propostum) %></td>
+        <td><%= link_to 'Destroy', propostum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Propostum', new_propostum_path %>

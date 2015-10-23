@@ -1,0 +1,29 @@
+<h1>Listing industria_concursos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id industria</th>
+      <th>Id concurso</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @industria_concursos.each do |industria_concurso| %>
+      <tr>
+        <td><%= industria_concurso.id_industria %></td>
+        <td><%= industria_concurso.id_concurso %></td>
+        <td><%= link_to 'Show', industria_concurso %></td>
+        <td><%= link_to 'Edit', edit_industria_concurso_path(industria_concurso) %></td>
+        <td><%= link_to 'Destroy', industria_concurso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Industria concurso', new_industria_concurso_path %>

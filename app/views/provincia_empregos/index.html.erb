@@ -1,0 +1,29 @@
+<h1>Listing provincia_empregos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id provincia</th>
+      <th>Id emprego</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @provincia_empregos.each do |provincia_emprego| %>
+      <tr>
+        <td><%= provincia_emprego.id_provincia %></td>
+        <td><%= provincia_emprego.id_emprego %></td>
+        <td><%= link_to 'Show', provincia_emprego %></td>
+        <td><%= link_to 'Edit', edit_provincia_emprego_path(provincia_emprego) %></td>
+        <td><%= link_to 'Destroy', provincia_emprego, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Provincia emprego', new_provincia_emprego_path %>

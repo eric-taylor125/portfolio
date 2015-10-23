@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titulo: MyString
+  descricao: MyString
+  data_inicio: 2015-08-11 21:12:36
+  data_expiracao: 2015-08-11 21:12:36
+  ID_Usuario: 1
+  ID_Tipo_de_Emprego: 1
+
+two:
+  titulo: MyString
+  descricao: MyString
+  data_inicio: 2015-08-11 21:12:36
+  data_expiracao: 2015-08-11 21:12:36
+  ID_Usuario: 1
+  ID_Tipo_de_Emprego: 1

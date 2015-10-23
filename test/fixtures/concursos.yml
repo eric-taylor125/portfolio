@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titulo: MyString
+  descricao: MyString
+  preco_minimo: 
+  preco_maximo: 9.99
+  data_inicio: 2015-08-09 12:15:03
+  data_expiracao: 2015-08-09 12:15:03
+  ID_Usuario: 1
+  ID_Tipo_de_Concurso: 1
+
+two:
+  titulo: MyString
+  descricao: MyString
+  preco_minimo: 
+  preco_maximo: 9.99
+  data_inicio: 2015-08-09 12:15:03
+  data_expiracao: 2015-08-09 12:15:03
+  ID_Usuario: 1
+  ID_Tipo_de_Concurso: 1

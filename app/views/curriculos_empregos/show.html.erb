@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id emprego:</strong>
+  <%= @curriculos_emprego.id_emprego %>
+</p>
+
+<p>
+  <strong>Id curriculo:</strong>
+  <%= @curriculos_emprego.id_curriculo %>
+</p>
+
+<%= link_to 'Edit', edit_curriculos_emprego_path(@curriculos_emprego) %> |
+<%= link_to 'Back', curriculos_empregos_path %>

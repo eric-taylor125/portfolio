@@ -1,0 +1,12 @@
+<div class="navbar navbar-inverse">
+  <ul class="nav navbar-nav">
+    <li><a href="" style="font-size: large"><strong>Novo Concurso</strong></a> </li>
+  </ul>
+  <div class="pull-right btn-group">
+    <%= link_to "Cancelar", :back, :class => "btn btn-danger" %>
+  </div>
+</div>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', concursos_path %>

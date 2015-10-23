@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  morada: MyText
+  telefone: MyString
+  email: MyString
+  documento_identificacao: MyString
+  N_documento_identificacao: MyString
+  habilitacoes_literarias: MyString
+  Experiencia_Profissional: MyString
+  Linguas: MyString
+  ID_Usuario: 1
+  ID_Concurso: 1
+  ID_Estado_curriculo: 1
+
+two:
+  nome: MyString
+  morada: MyText
+  telefone: MyString
+  email: MyString
+  documento_identificacao: MyString
+  N_documento_identificacao: MyString
+  habilitacoes_literarias: MyString
+  Experiencia_Profissional: MyString
+  Linguas: MyString
+  ID_Usuario: 1
+  ID_Concurso: 1
+  ID_Estado_curriculo: 1

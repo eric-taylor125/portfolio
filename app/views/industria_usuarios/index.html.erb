@@ -1,0 +1,29 @@
+<h1>Listing industria_usuarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id industria</th>
+      <th>Id usuario</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @industria_usuarios.each do |industria_usuario| %>
+      <tr>
+        <td><%= industria_usuario.id_industria %></td>
+        <td><%= industria_usuario.id_usuario %></td>
+        <td><%= link_to 'Show', industria_usuario %></td>
+        <td><%= link_to 'Edit', edit_industria_usuario_path(industria_usuario) %></td>
+        <td><%= link_to 'Destroy', industria_usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Industria usuario', new_industria_usuario_path %>

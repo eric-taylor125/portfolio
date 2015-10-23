@@ -1,0 +1,1 @@
+json.extract! @curriculo, :id, :nome, :morada, :telefone, :email, :documento_identificacao, :N_documento_identificacao, :habilitacoes_literarias, :Experiencia_Profissional, :Linguas, :ID_Usuario, :ID_Concurso, :ID_Estado_curriculo, :created_at, :updated_at

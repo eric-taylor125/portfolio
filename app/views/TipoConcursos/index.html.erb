@@ -1,0 +1,27 @@
+<h1>Listing tipo_de_concursos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tipo_concursos.each do |tipo_de_concurso| %>
+      <tr>
+        <td><%= tipo_de_concurso.nome %></td>
+        <td><%= link_to 'Show', tipo_de_concurso %></td>
+        <td><%= link_to 'Edit', edit_tipo_de_concurso_path(tipo_de_concurso) %></td>
+        <td><%= link_to 'Destroy', tipo_de_concurso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tipo de concurso', new_tipo_de_concurso_path %>

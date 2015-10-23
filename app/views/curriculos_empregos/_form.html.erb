@@ -1,0 +1,25 @@
+<%= form_for(@curriculos_emprego) do |f| %>
+  <% if @curriculos_emprego.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@curriculos_emprego.errors.count, "error") %> prohibited this curriculos_emprego from being saved:</h2>
+
+      <ul>
+      <% @curriculos_emprego.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id_emprego %><br>
+    <%= f.number_field :id_emprego %>
+  </div>
+  <div class="field">
+    <%= f.label :id_curriculo %><br>
+    <%= f.number_field :id_curriculo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

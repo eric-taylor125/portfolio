@@ -1,0 +1,29 @@
+<h1>Listing funcao_empregos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id funcao</th>
+      <th>Id emprego</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @funcao_empregos.each do |funcao_emprego| %>
+      <tr>
+        <td><%= funcao_emprego.id_funcao %></td>
+        <td><%= funcao_emprego.id_emprego %></td>
+        <td><%= link_to 'Show', funcao_emprego %></td>
+        <td><%= link_to 'Edit', edit_funcao_emprego_path(funcao_emprego) %></td>
+        <td><%= link_to 'Destroy', funcao_emprego, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Funcao emprego', new_funcao_emprego_path %>

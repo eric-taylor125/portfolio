@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @propostum.descricao %>
+</p>
+
+<p>
+  <strong>Preco:</strong>
+  <%= @propostum.preco %>
+</p>
+
+<p>
+  <strong>Id usuario:</strong>
+  <%= @propostum.ID_Usuario %>
+</p>
+
+<p>
+  <strong>Id concurso:</strong>
+  <%= @propostum.ID_Concurso %>
+</p>
+
+<p>
+  <strong>Id estado proposta:</strong>
+  <%= @propostum.ID_Estado_Proposta %>
+</p>
+
+<%= link_to 'Edit', edit_propostum_path(@propostum) %> |
+<%= link_to 'Back', proposta_path %>

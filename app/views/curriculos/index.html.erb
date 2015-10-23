@@ -1,0 +1,49 @@
+<h1>Listing curriculos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Morada</th>
+      <th>Telefone</th>
+      <th>Email</th>
+      <th>Documento identificacao</th>
+      <th>N documento identificacao</th>
+      <th>Habilitacoes literarias</th>
+      <th>Experiencia profissional</th>
+      <th>Linguas</th>
+      <th>Id usuario</th>
+      <th>Id concurso</th>
+      <th>Id estado curriculo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @curriculos.each do |curriculo| %>
+      <tr>
+        <td><%= curriculo.nome %></td>
+        <td><%= curriculo.morada %></td>
+        <td><%= curriculo.telefone %></td>
+        <td><%= curriculo.email %></td>
+        <td><%= curriculo.documento_identificacao %></td>
+        <td><%= curriculo.N_documento_identificacao %></td>
+        <td><%= curriculo.habilitacoes_literarias %></td>
+        <td><%= curriculo.Experiencia_Profissional %></td>
+        <td><%= curriculo.Linguas %></td>
+        <td><%= curriculo.ID_Usuario %></td>
+        <td><%= curriculo.ID_Concurso %></td>
+        <td><%= curriculo.ID_Estado_curriculo %></td>
+        <td><%= link_to 'Show', curriculo %></td>
+        <td><%= link_to 'Edit', edit_curriculo_path(curriculo) %></td>
+        <td><%= link_to 'Destroy', curriculo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Curriculo', new_curriculo_path %>

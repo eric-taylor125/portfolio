@@ -1,0 +1,58 @@
+<div class="navbar navbar-inverse">
+  <ul class="nav navbar-nav">
+    <li><a href="" style="font-size: large"><strong>Empregos</strong></a> </li>
+    <li><a href="">Tipo<span class="caret"></span></a> </li>
+    <li><a href="">Indústria<span class="caret"></span></a> </li>
+    <li><a href="">Função<span class="caret"></span></a></li>
+    <li><a href="">Empregador<span class="caret"></span> </a> </li>
+    <li><a href="">Experiência mínima<span class="caret"></span></a></li>
+    <li><a href="">Salário até<span class="caret"></span></a></li>
+    <li><a href="">Província<span class="caret"></span></a></li>
+  </ul>
+  <div class="pull-right btn-group">
+    <%= link_to "Criar Novo", new_emprego_url, :class => "btn btn-primary" %>
+  </div>
+</div>
+
+<div id="results" class="container panel panel-default">
+
+  <div id="results-header" class=" panel-body">
+    <% if @empregos.any? %>
+        <div class="pull-left">
+          <p align="left"><%= pluralize(@empregos.count, 'Concurso encontrado.','Concursos encontrados.') %></p>
+        </div>
+        <div class="pull-right">
+          <div class="btn-group" role="group">
+            <button class="btn btn-default">Lista</button>
+            <button class="btn btn-default">Matriz</button>
+            <button class="btn btn-default">Tabela</button>
+          </div>
+        </div>
+    <% else %>
+        <p>Não existem resultados para mostrar.<br>Modifique os seus critérios de pesquisa e tente de novo.</p>
+    <% end %>
+  </div>
+
+  <div id="results-body">
+    <% @empregos.each do |emprego| %>
+        <div class="col-sm-6">
+          <div class="panel panel-default" id="emprego#<%= emprego.id %>" data-emprego="<%= emprego.to_s %>">
+            <div class="panel-heading">
+              <h3 class="panel-title"><%= emprego.titulo %></h3>
+            </div>
+            <div class="panel-body">
+              <p align="left"><%= emprego.descricao[0..500] %></p>
+              <div class="pull-right label label-default">
+                <%= emprego.created_at.strftime('%D') %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <% end %>
+  </div>
+  <div id="results-footer">
+
+  </div>
+</div>
+

@@ -1,0 +1,29 @@
+<h1>Listing funcao_concursos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id funcao</th>
+      <th>Id concurso</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @funcao_concursos.each do |funcao_concurso| %>
+      <tr>
+        <td><%= funcao_concurso.id_funcao %></td>
+        <td><%= funcao_concurso.id_concurso %></td>
+        <td><%= link_to 'Show', funcao_concurso %></td>
+        <td><%= link_to 'Edit', edit_funcao_concurso_path(funcao_concurso) %></td>
+        <td><%= link_to 'Destroy', funcao_concurso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Funcao concurso', new_funcao_concurso_path %>

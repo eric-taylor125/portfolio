@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @curriculo.nome %>
+</p>
+
+<p>
+  <strong>Morada:</strong>
+  <%= @curriculo.morada %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @curriculo.telefone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @curriculo.email %>
+</p>
+
+<p>
+  <strong>Documento identificacao:</strong>
+  <%= @curriculo.documento_identificacao %>
+</p>
+
+<p>
+  <strong>N documento identificacao:</strong>
+  <%= @curriculo.N_documento_identificacao %>
+</p>
+
+<p>
+  <strong>Habilitacoes literarias:</strong>
+  <%= @curriculo.habilitacoes_literarias %>
+</p>
+
+<p>
+  <strong>Experiencia profissional:</strong>
+  <%= @curriculo.Experiencia_Profissional %>
+</p>
+
+<p>
+  <strong>Linguas:</strong>
+  <%= @curriculo.Linguas %>
+</p>
+
+<p>
+  <strong>Id usuario:</strong>
+  <%= @curriculo.ID_Usuario %>
+</p>
+
+<p>
+  <strong>Id concurso:</strong>
+  <%= @curriculo.ID_Concurso %>
+</p>
+
+<p>
+  <strong>Id estado curriculo:</strong>
+  <%= @curriculo.ID_Estado_curriculo %>
+</p>
+
+<%= link_to 'Edit', edit_curriculo_path(@curriculo) %> |
+<%= link_to 'Back', curriculos_path %>
